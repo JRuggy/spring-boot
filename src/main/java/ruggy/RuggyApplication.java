@@ -5,6 +5,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import ruggy.student.Student;
+
+import java.time.LocalDate;
 // This imports all lists
 import java.util.List;
 @SpringBootApplication
@@ -16,8 +19,16 @@ public class RuggyApplication {
 	}
 
 	@GetMapping
-	public List<String> hello() {
-		return List.of("Jaston","Ruggy");
+	public List<Student> hello() {
+		return List.of(
+			new Student(
+				1L,
+				"Ruggy",
+				"jastonruggy@icloud.com",
+				LocalDate.of(1999, 9, 04),
+				21
+			)
+		);
 	}
 
 }
