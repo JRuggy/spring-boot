@@ -27,6 +27,6 @@ public class StudentService {
         if(studentOptional.isPresent()){
             throw new IllegalStateException("Email's taken");
         }
-        System.out.println(student);
+        studentRepository.save(student);
     }
 }
