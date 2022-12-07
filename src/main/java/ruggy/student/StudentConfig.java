@@ -18,24 +18,21 @@ public class StudentConfig {
             Student ruggy = new Student(
                 "Ruggy",
                 "jastonruggy@icloud.com",
-                LocalDate.of(1998, Month.SEPTEMBER, 04),
-                21
+                LocalDate.of(1998, Month.SEPTEMBER, 04)
             );
 
             // This is for jarred
             Student jarred = new Student(
                 "Jarred",
                 "jarred@icloud.com",
-                LocalDate.of(1990, Month.SEPTEMBER, 04),
-                21
+                LocalDate.of(1990, Month.SEPTEMBER, 04)
             );
 
             // This is for mama
             Student mama = new Student(
                 "Mama",
                 "mama@icloud.com",
-                LocalDate.of(1970, Month.SEPTEMBER, 04),
-                21
+                LocalDate.of(1970, Month.SEPTEMBER, 04)
             );
 
             repository.saveAll(

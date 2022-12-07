@@ -1,14 +1,9 @@
 package ruggy.student;
 
 import java.time.LocalDate;
+import java.time.Period;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.SequenceGenerator;
-import javax.persistence.Table;
-import javax.persistence.Transient;
+import javax.persistence.*;
 
 @Entity
 @Table
@@ -49,8 +44,7 @@ public class Student {
     public Student(
             String name,
             String email,
-            LocalDate dob,
-            Integer age) {
+            LocalDate dob) {
         this.name = name;
         this.email = email;
         this.dob = dob;
@@ -94,7 +88,7 @@ public class Student {
 
     // for age
     public Integer getAge() {
-        return age;
+        return Period.between(this.dob, LocalDate.now()).getYears();
     }
 
     public void setAge(Integer age) {
