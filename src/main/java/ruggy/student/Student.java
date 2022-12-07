@@ -8,6 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 
 @Entity
 @Table
@@ -27,6 +28,8 @@ public class Student {
     private String name;
     private String email;
     private LocalDate dob;
+
+    @Transient
     private Integer age;
 
     public Student() {
@@ -36,13 +39,11 @@ public class Student {
             Long id,
             String name,
             String email,
-            LocalDate dob,
-            Integer age) {
+            LocalDate dob) {
         this.id = id;
         this.name = name;
         this.email = email;
         this.dob = dob;
-        this.age = age;
     }
 
     public Student(
@@ -53,7 +54,6 @@ public class Student {
         this.name = name;
         this.email = email;
         this.dob = dob;
-        this.age = age;
     }
 
     // For id
