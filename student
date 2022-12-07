@@ -1,0 +1,11 @@
+\q
+create database zrmis
+\q
+create database zrmis;
+l
+\q
+\q
+\l
+\du
+\l
+\s student
