@@ -3,6 +3,9 @@ package ruggy.student;
 import java.time.LocalDate;
 import java.util.List;
 
+import org.springframework.stereotype.Component;
+
+@Component
 public class StudentService {
     public List<Student> getStudents() {
 		return List.of(
