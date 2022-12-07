@@ -2,6 +2,7 @@ package ruggy.student;
 
 import java.time.LocalDate;
 import java.time.Month;
+import java.util.List;
 
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.context.annotation.Bean;
@@ -35,6 +36,10 @@ public class StudentConfig {
                 "mama@icloud.com",
                 LocalDate.of(1970, Month.SEPTEMBER, 04),
                 21
+            );
+
+            repository.saveAll(
+                List.of(ruggy, jarred, mama)
             );
         };
     }
