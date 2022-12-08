@@ -35,8 +35,15 @@ public class StudentConfig {
                 LocalDate.of(1970, Month.SEPTEMBER, 04)
             );
 
+             // This is for mama
+             Student martin = new Student(
+                "Martin",
+                "martin@icloud.com",
+                LocalDate.of(1950, Month.SEPTEMBER, 04)
+            );
+
             repository.saveAll(
-                List.of(ruggy, jarred, mama)
+                List.of(ruggy, jarred, mama, martin)
             );
         };
     }
